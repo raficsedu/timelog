@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "c97259b5-fd76-41a0-acd6-ff62e2ec831f",
+		"name": "Bakersoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Test\",\n    \"last_name\": \"Name\",\n    \"email\": \"test@gmail.com\",\n    \"username\": \"test123\",\n    \"password\": \"Test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/user/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"Test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/project/list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyOTkzMTUyLCJpYXQiOjE2NjI5ODk1NTIsImp0aSI6IjEzZjBhZjY4YjFmMTQxMmQ4MzU3MDdhMzY2NjVkMGNmIiwidXNlcl9pZCI6Nn0.VIzmlKGCeLpOa_Lfq5KGATjRHMqS0tLRgJPob5dIZKc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"This is project title - 3\",\n    \"description\": \"This is urgent project\",\n    \"status\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/project/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"project",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/project/member/list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYzMDYzOTg0LCJpYXQiOjE2NjMwNjAzODQsImp0aSI6IjhmZGE4MDAzMzRjZTQ1MTVhOTRiYzkyZDYxOWY0MzAzIiwidXNlcl9pZCI6N30.5r_GfZ_eDx87GKy_covkPjibca5kCB4n1rEp4JjWISc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": 2,\n    \"project\": 1,\n    \"role\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/project/member/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"project",
+						"member",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/project/timelog/list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYzMDY4NDUzLCJpYXQiOjE2NjMwNjQ4NTMsImp0aSI6IjRmOTU0MWY5YzE0YjQ5ZDE4ODdlZTQ2OGM1OGU0Y2RlIiwidXNlcl9pZCI6Nn0.xIscLkLNqxe3PE1Anx4-FrNlqSw2ZybWHR8B8Qtn82k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"member\": 2,\n    \"memo\": \"Working API\",\n    \"start\": \"2022-09-12 10:10:00\",\n    \"end\": \"2022-09-12 12:50:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/project/timelog/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"project",
+						"timelog",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/project/list/timelog/3?member=6&date=2022-09-12",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYzMDY4NTIyLCJpYXQiOjE2NjMwNjQ5MjIsImp0aSI6ImYzNTIwZWM1ZTk2NzQ0ZDJhM2YxYmUyODI5ZDE5YzQwIiwidXNlcl9pZCI6N30.hXO-3pjv64I6JASyYEfYat47MPOLLuT4tZZ2HxguewQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/project/list/timelog/3?member=6&date=2022-09-12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"project",
+						"list",
+						"timelog",
+						"3"
+					],
+					"query": [
+						{
+							"key": "member",
+							"value": "6"
+						},
+						{
+							"key": "date",
+							"value": "2022-09-12"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
